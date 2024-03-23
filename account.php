@@ -71,7 +71,12 @@ if (@$_GET['q'] == 2)
     <li <?php
 if (@$_GET['q'] == 3)
     echo 'class="active"';
-?>><a href="account.php?q=3"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;Leaderboard</a></li></ul>
+?>><a href="account.php?q=3"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;Leaderboard</a></li>
+ <li <?php
+if (@$_GET['q'] == 4)
+    echo 'class="active"';
+?>><a href="account.php?q=3"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;Course Update</a></li></ul>
+
             
       </div>
   </div>
@@ -466,7 +471,15 @@ if (@$_GET['q'] == 'result' && @$_GET['eid']) {
                 echo '<font style="font-size:14px;color:red"><b>Correct Answer: </b></font><font style="font-size:14px;">' . $correctans . '</font><br />';
                 
             }
+            
+                
+            
             echo "<br /></li>";
+        }
+        if($r>=7){
+        echo '<a href="feedback.php" >SUBMIT CV</a>';}
+        else{
+            echo '<a href="feedback.php" >To Try Again You Can Do Our Offered Course</a>';
         }
         echo '</ol>';
         echo "</div>";
@@ -593,3 +606,4 @@ if (@$_GET['q'] == 3) {
 
 </body>
 </html>
+
